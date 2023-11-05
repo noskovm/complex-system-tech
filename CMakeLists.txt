@@ -6,6 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(src)
 
 add_executable(complex_system_tech
-        src/DoublyLinkedCircularList.cpp
-        src/DoublyLinkedCircularList.h
+        src/CircularDoublyLinkedList.cpp
+        src/CircularDoublyLinkedList.h
         src/main.cpp)
