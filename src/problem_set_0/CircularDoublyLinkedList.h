@@ -1,5 +1,6 @@
 #ifndef CIRCULARDOUBLYLINKEDLIST_H
 #define CIRCULARDOUBLYLINKEDLIST_H
+#include <iostream>
 
 // Объявление типа данных Node(узел списка)
 template<typename T>
@@ -24,13 +25,16 @@ public:
 template<typename T>
 class CircularDoublyLinkedList {
 public:
+
     CircularDoublyLinkedList();
+    //~CircularDoublyLinkedList();
 
     enum Direction {
         CLOCKWISE,
         COUNTERCLOCKWISE
     };
 
+    void del();
     void set_clockwise_direction();
     void set_counterclockwise_direction();
     Direction get_direction();
@@ -57,6 +61,14 @@ CircularDoublyLinkedList<T>::CircularDoublyLinkedList():
     current(nullptr),
     dir(CircularDoublyLinkedList::Direction::CLOCKWISE),
     length(0) {}
+
+template<typename T>
+void CircularDoublyLinkedList<T>::del() {
+    for (int i = 0; i < length; ++i) {
+        std::cout << "Удаляю элемент под индексом ";
+        std::cout << pull();
+    }
+}
 
 // set_clockwise_direction задает направление обхода списка по часовой стрелке
 template<typename T>
@@ -127,6 +139,8 @@ int CircularDoublyLinkedList<T>::pull() {
     }
     return -1;
 }
+
+
 
 // go_next меняет узел current на следующий за ним
 template<typename T>
