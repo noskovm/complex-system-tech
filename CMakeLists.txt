@@ -9,4 +9,6 @@ include_directories(src
 add_executable(complex_system_tech
         src/problem_set_0/CircularDoublyLinkedList.cpp
         src/problem_set_0/CircularDoublyLinkedList.h
-        src/main.cpp)
+        src/main.cpp
+        src/problem_set_1/allocator.cpp
+        src/problem_set_1/allocator.h)
