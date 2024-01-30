@@ -1,22 +1,19 @@
 #include <iostream>
 
 #include "problem_set_1/allocator.h"
-#include "../3rdParty/logger/logger_builder.h"
-#include "../3rdParty/logger/logger_builder_concrete.h"
+#include "problem_set_1/simple_allocator.h"
 
 int main() {
-    logger_builder *builder = new logger_builder_concrete();
-    auto *logger = builder
-        ->add_console_stream(logger::severity::debug)
-        ->add_file_stream("sorted list allocator trace logs.txt", logger::severity::trace)
-        ->build();
-    delete builder;
-
-    std::cout << "Hello World" << std::endl;
 
     simple_allocator smpl_allocator;
+    
+    void* block = smpl_allocator.allocate(100000);
+    void* bigger_block = smpl_allocator.reallocate(block, 10);
 
-    void* allocated_block = smpl_allocator.allocate(1000);
+    void* another_block = smpl_allocator.allocate(100);
+    void* bbbblock = smpl_allocator.reallocate(another_block, 2000000);
 
+    std::cout << "Hello World";
+    
     return 0;
 }
