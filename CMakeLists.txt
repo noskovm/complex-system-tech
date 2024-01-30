@@ -18,6 +18,8 @@ add_executable(complex_system_tech
         src/main.cpp
         src/problem_set_1/allocator.cpp
         src/problem_set_1/allocator.h
+        src/problem_set_1/simple_allocator.h
+        src/problem_set_1/simple_allocator.cpp
         3rdParty/allocator_holder.cpp
         3rdParty/allocator_sorted_list.cpp
         3rdParty/allocator.cpp
