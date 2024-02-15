@@ -1,0 +1,2 @@
+[TRACE][12.02.2024 00:58:41] allocator boundary descriptor allocator instance construction started
+[DEBUG][12.02.2024 00:58:41] requested memory size: 100 bytes

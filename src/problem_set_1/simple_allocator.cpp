@@ -1,6 +1,14 @@
 #include "simple_allocator.h"
 
+simple_allocator::simple_allocator(logger *logger) {
+    log = logger;
+}
+
 void* simple_allocator::allocate(size_t target_size) {
+
+    log->trace("allocator instance construction started");
+    log->trace("requested block memory " + std::to_string(target_size) + " bytes");
+
     void* new_block = ::operator new(target_size + sizeof(size_t));
     size_t* block_for_size = reinterpret_cast<size_t *>(new_block);
     block_for_size[0] = target_size;

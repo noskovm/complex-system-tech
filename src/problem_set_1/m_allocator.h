@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <iostream>
 
-class allocator {
+class m_allocator {
 public:
     virtual void* allocate(size_t target_size) = 0;
     virtual void deallocate(void* target_to_dealloc) = 0;
