@@ -1,2 +1,8 @@
-[TRACE][12.02.2024 00:58:41] allocator boundary descriptor allocator instance construction started
-[DEBUG][12.02.2024 00:58:41] requested memory size: 100 bytes
+[TRACE][16.02.2024 21:48:00] allocator boundary descriptor allocator instance construction started
+[DEBUG][16.02.2024 21:48:00] requested memory size: 10000 bytes
+[TRACE][16.02.2024 21:48:00] allocator boundary descriptor allocator instance construction finished
+[TRACE][16.02.2024 21:48:00] Method `void *allocator boundary descriptor::allocate(size_t requested_block_size)` execution started
+[DEBUG][16.02.2024 21:48:00] Requested 1000 bytes of memory
+[TRACE][16.02.2024 21:48:00] Allocated block placed at 0x55df350b701d
+[TRACE][16.02.2024 21:48:00] Method `void *allocator boundary descriptor::allocate(size_t requested_block_size)` execution finished
+[DEBUG][16.02.2024 21:48:00] After `allocate` for 1000 bytes (addr == 0x55df350b7014):
